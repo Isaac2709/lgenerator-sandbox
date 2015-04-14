@@ -4,6 +4,11 @@ This project is for learning purposes
 
 
 Install
+=========
+
+ composer create-project fragale/lgenerator-sandbox testlgenerator dev-master --prefer-dist
+
+
 
 * Modify the .env file to access to your database
 * run **php artisan migrate:install**
