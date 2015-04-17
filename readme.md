@@ -17,6 +17,15 @@ Install
 
 Enjoy
 
+Updating
+--------
+To update an existing sandbox proyect
+* run **composer update**
+* run **php artisan migrate:refresh --seed**
+* run **php artisan makefast:crudstructure**
+
+*To have a sane sandbox, I always prefer a clean install instead of updates*
+
 ## Official Documentation
 
 Documentation for the lgenerator [fragale/lgenerator](https://github.com/fragale/lgenerator).
