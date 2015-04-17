@@ -13,31 +13,32 @@ class CreateFamiliesTable extends Migration {
 	public function up()
 	{
 		Schema::create('families', function(Blueprint $table)
-		{
-			$table->increments('id');
-			$table->string('first_name');
-			$table->string('last_name');
-			$table->enum('gender', ['f', 'm']);
+			{
+				$table->increments('id');
+				$table->string('first_name');
+				$table->string('last_name');
+				$table->enum('gender', ['f', 'm'])->nullable();
 
-			$table->date('date_of_birth');
-			$table->string('nacionality',3);
-			$table->string('city_of_birth');
+				$table->string('photo')->nullable();
 
-			$table->string('marital_status');			
+				$table->date('date_of_birth')->nullable();
+				$table->string('nacionality',3)->nullable();
+				$table->string('city_of_birth')->nullable();
 
-			$table->string('document_type');
-			$table->string('document_number');
-			$table->string('passport_number')->nullable();
-			$table->string('ss_number');
+				$table->string('marital_status')->nullable();	
 
-			//Employees-Users link
-			$table->integer('employee_id')->unsigned()->nullable();
+				$table->string('document_type')->nullable();
+				$table->string('document_number')->nullable();
+				$table->string('passport_number')->nullable();
+				$table->string('ss_number')->nullable();
 
-			$table->timestamps();
+				//Employees link
+				$table->integer('employee_id')->unsigned()->nullable();
 
-			$table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
+				$table->timestamps();
 
-		});
+				$table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
+			});
 	}
 
 	/**

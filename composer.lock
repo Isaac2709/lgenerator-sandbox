@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1cf395e0af7377a649784fc3c8835c57",
+    "hash": "2a0233353c28121fa914528e85bde12b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -393,12 +393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fragale/lgenerator.git",
-                "reference": "cec275893e4557dab86bf4f0b5fca7fefefb1706"
+                "reference": "64e9e110f1cd2c75130f3e7be92a19c36e92aa73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fragale/lgenerator/zipball/cec275893e4557dab86bf4f0b5fca7fefefb1706",
-                "reference": "cec275893e4557dab86bf4f0b5fca7fefefb1706",
+                "url": "https://api.github.com/repos/fragale/lgenerator/zipball/64e9e110f1cd2c75130f3e7be92a19c36e92aa73",
+                "reference": "64e9e110f1cd2c75130f3e7be92a19c36e92aa73",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +446,7 @@
                 "laravel",
                 "laravel 5.0"
             ],
-            "time": "2015-04-14 13:56:29"
+            "time": "2015-04-17 14:09:31"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -714,12 +714,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "e46a6b861a72ae596d009e1bb037f81c34849058"
+                "reference": "30828b6659ff045a610e12412ddbed51f8c64944"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e46a6b861a72ae596d009e1bb037f81c34849058",
-                "reference": "e46a6b861a72ae596d009e1bb037f81c34849058",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/30828b6659ff045a610e12412ddbed51f8c64944",
+                "reference": "30828b6659ff045a610e12412ddbed51f8c64944",
                 "shasum": ""
             },
             "require": {
@@ -782,7 +782,7 @@
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~2.4",
-                "iron-io/iron_mq": "~1.5",
+                "iron-io/iron_mq": "~2.0",
                 "mockery/mockery": "~0.9",
                 "pda/pheanstalk": "~3.0",
                 "phpunit/phpunit": "~4.0",
@@ -792,7 +792,7 @@
                 "aws/aws-sdk-php": "Required to use the SQS queue driver (~2.4).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
                 "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~5.0).",
-                "iron-io/iron_mq": "Required to use the iron queue driver (~1.5).",
+                "iron-io/iron_mq": "Required to use the iron queue driver (~2.0).",
                 "league/flysystem-aws-s3-v2": "Required to use the Flysystem S3 driver (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
@@ -832,7 +832,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-04-12 20:07:51"
+            "time": "2015-04-15 22:02:22"
         },
         {
             "name": "laravelcollective/html",

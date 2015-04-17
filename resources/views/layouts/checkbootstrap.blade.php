@@ -10,6 +10,7 @@
             </button>
             </div>          
         </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="{{ asset('assets/plugins/bootstrap/bootstrap/js/bootstrap.min.js') }}"></script>
     </body> 
 </html>

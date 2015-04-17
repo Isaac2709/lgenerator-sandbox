@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB as DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Config;
 
 class BaseCRUDController extends BaseController {
 
@@ -317,6 +318,45 @@ class BaseCRUDController extends BaseController {
 		$this->Master=ucwords(trim($master));
 		$this->master_id=$master_id;
 		return true;
+	}
+
+	public function tryToCreateDir($path)
+	{
+		$file=new File;
+		if(!$file->exists($path)){
+			$result=$file->makeDirectory($path);
+		}else{
+			$result=true;
+		}
+		return $result;			
+	}	
+
+	public function movePictures($model){
+		$result=false;
+		if(!empty(array_filter($this->picture_fields))){
+			//dd($this->picture_fields);
+
+	        /*el path al que se moveran las imagenes*/
+	        $models=$this->models_name;
+	        $path = Config::get("cruds.$models.settings.pictures_path", Config::get("cruds.settings.pictures_path"));
+	        if($path==''){
+	        	$path='uploads';
+	        }
+
+			foreach ($this->picture_fields as $field) {
+				$file = Input::file($field);					
+				//dd($file);
+				if (is_object($file)){
+					list($file_name,$file_ext)=explode(".",$file->getClientOriginalName());
+					$file_name='picture_'.trim($model->id).'_'.md5($model->id).'.'.$file_ext;
+					$model->$field      = $path.'/'.$file_name;					
+					$file->move(public_path().'/'.$path,$file_name);
+					$result=$model->save();					
+				}				
+			}
+		}
+		return $result;
+
 	}
 
 }
